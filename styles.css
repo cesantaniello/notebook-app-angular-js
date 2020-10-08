@@ -33,3 +33,15 @@ h1{
 	padding:10px;
 }
 
+button
+{
+   background:#080;
+   color:#fff;
+   padding:5px 15px;
+   border-radius: 5px;
+   border: thin solid #060;
+   margin: 5px auto;
+}
+button:hover{
+   background: #0A0;
+}

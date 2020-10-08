@@ -13,8 +13,9 @@
                 <span class="curso">{{alumno.curso}} </span>
             </div>
 		</div>	
-		
-		<div class="wrapper">
+		<br/>
+        <center><button ng-click="ShowForm()" ng-hide="formVisibility"> Añadir Contacto</button></center>
+		<div ng-show="formVisibility" class="wrapper">
 			<h2>Añadir un contacto</h2>
 			Nombre: <input type="text" ng-model="nuevoAlumno.nombre"></input>
 			Teléfono: <input type="text" ng-model="nuevoAlumno.telefono"></input>
