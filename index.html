@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera aplicación con AngularJS</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
-</head>
-<body ng-app ng-init= "Creadores = 'Hevery y Abrons'">
-    AngularJS fue creado por {{Creadores}} hace sólo {{2020-2009}} años.    
-</body>
+<html ng-app>
+	<head>
+	    <meta charset="utf-8">
+		<title>Cuaderno Alumnos</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+		<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+		<script src= "scripts1.js" type="text/javascript"></script>
+   	</head>
+	<body ng-controller="AlumnosController">
+            <h1>Cuaderno Alumnos</h1>	
+	    <div class="wrapper">
+            <div class="contact-item" ng-repeat="alumno in alumnos | orderBy:'nombre'">
+                <div class="nombre"> {{alumno.nombre}} - {{alumno.telefono}}</div>
+                <span class="curso">{{alumno.curso}} </span>
+            </div>
+		</div>	
+		<br/>
+        <center><button ng-click="ShowForm()" ng-hide="formVisibility"> Añadir Contacto</button></center>
+		<div ng-show="formVisibility" class="wrapper">
+			<h2>Añadir un contacto</h2>
+			Nombre: <input type="text" ng-model="nuevoAlumno.nombre"></input>
+			Teléfono: <input type="number" ng-model="nuevoAlumno.telefono"></input>
+			Curso: <input type="text" ng-model="nuevoAlumno.curso"></input>
+			<button ng-click="Save()">Guardar</button>
+		</div>
+	
+
+	</body>
 </html>
