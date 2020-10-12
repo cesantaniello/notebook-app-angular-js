@@ -1,3 +1,3 @@
-# Curso de Angular JS 
+# Aplicación de cuaderno de alumnos en Angular JS 
 
-Se ha usado la versión de AngularJS minificada 1.2.32
+Pequeña aplicación web hecha con AngularJS minificado 1.2.32
